@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { EditPage } from './edit.page';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { AccordionListComponent } from '../accordion-list/accordion-list.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [EditPage]
+  exports: [],
+  providers: [ HttpClientModule ],
+  declarations: [EditPage, AccordionListComponent]
 })
 export class EditPageModule {}

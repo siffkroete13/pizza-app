@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { InsertPage } from './insert.page';
+import { InsertFormComponent } from '../insert-form/insert-form.component';
+import { ReactiveFormComponent } from '../reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [InsertPage]
+  declarations: [InsertPage, InsertFormComponent, ReactiveFormComponent]
 })
 export class InsertPageModule {}

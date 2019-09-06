@@ -1,0 +1,27 @@
+.clickable {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.expand_wrapper {
+    transition: max-height 0.4s ease-in-out;
+    overflow: hidden;
+    height: auto;
+}
+
+.collapsed {
+    height: 0px !important;
+    max-height: 0px !important;
+}
+
+.notCollapsed {
+    height: 150px !important;
+    max-height: 150px !important;
+}
+
+div.box:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}

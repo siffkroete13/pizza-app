@@ -1,0 +1,38 @@
+<div #accordionListWrapper class="accordion_list_wrapper">
+    <ion-card *ngFor="let item of items">
+
+        <ion-card-header class="clickable" (click)="toggle(item)">
+            <ion-card-title>{{item.name}}</ion-card-title>
+        </ion-card-header>
+
+        <div class="expand_wrapper" [ngClass]="status == true ? 'collapsed' : 'notCollapsed'">
+            <ion-card-content>
+                    Hi Welt!
+            </ion-card-content>
+        </div>
+    </ion-card>
+</div>
+
+
+<!--
+
+    Bootstrap-Accordion-List
+
+
+    <div class="container"  id="updateProduct">
+    <div id="accordion" class="accordion">
+        <div class="card mb-0" *ngFor="let item of items">
+            <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                <a class="card-title">
+                    Item 1
+                </a>
+            </div>
+            <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->

@@ -19,8 +19,14 @@ const routes: Routes = [
     path: 'edit',
     loadChildren: () => import('./edit/edit.module').then(m => m.EditPageModule)
   },
-  { path: 'order', loadChildren: './order/order.module#OrderPageModule' },
-  { path: 'insert', loadChildren: './insert/insert.module#InsertPageModule' }
+  {
+    path: 'order', 
+    loadChildren: () => import('./order/order.module').then(m => m.OrderPageModule)
+  },
+  { 
+    path: 'insert', 
+    loadChildren: () => import('./insert/insert.module').then(m => m.InsertPageModule)
+  }
 ];
 
 @NgModule({
