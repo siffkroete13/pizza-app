@@ -3,7 +3,7 @@
     <ion-card *ngFor="let item of items">
 
         <ion-card-header (click)="toggle(item)" [ngClass]="status == true ? 'clickablePlus' : 'clickableMinus'">
-            <label for="titel1">{{item.name}}</label>
+            <label class="clickable" for="titel1">{{item.name}}</label>
         </ion-card-header>
 
         <div class="expand_wrapper" [ngClass]="status == true ? 'collapsed' : 'notCollapsed'">
