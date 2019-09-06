@@ -1,8 +1,9 @@
 <div #accordionListWrapper class="accordion_list_wrapper">
+
     <ion-card *ngFor="let item of items">
 
-        <ion-card-header class="clickable" (click)="toggle(item)">
-            <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-header (click)="toggle(item)" [ngClass]="status == true ? 'clickablePlus' : 'clickableMinus'">
+            <label for="titel1">{{item.name}}</label>
         </ion-card-header>
 
         <div class="expand_wrapper" [ngClass]="status == true ? 'collapsed' : 'notCollapsed'">
@@ -10,7 +11,9 @@
                     Hi Welt!
             </ion-card-content>
         </div>
+
     </ion-card>
+
 </div>
 
 
